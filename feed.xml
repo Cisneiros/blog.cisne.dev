@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Cisne.dev blog</title>
+        <link>https://blog.cisne.dev</link>
+        <description>Blog pessoal de desenvolvimento de Alexandre Cisneiros</description>
+        <lastBuildDate>Tue, 23 Feb 2021 19:26:22 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>pt</language>
+        <copyright>© Alexandre Cisneiros CC-BY-SA 4.0</copyright>
+        <item>
+            <title><![CDATA[Recursão de cauda — ou como não estourar a pilha]]></title>
+            <link>https://blog.cisne.dev/recursao-de-causa-ou-como-nao-estourar-a-pilha</link>
+            <guid>https://blog.cisne.dev/recursao-de-causa-ou-como-nao-estourar-a-pilha</guid>
+            <pubDate>Fri, 13 Nov 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Quando precisamos realizar uma operação várias vezes, geralmente existem duas maneiras: iterativa e recursiva. Iterativa é quando utilizamos alguma estrutura de laço, como um <code>for</code> ou <code>while</code>, com uma variável de controle para saber quando parar. Recursiva é quando uma função decide <strong>executar a si mesma</strong> por entender que ainda precisa continuar processando. Toda iteração pode ser escrita como uma recursão e vice-versa. Recursões porém tem um risco associado: o <strong>estouro da pilha</strong>. Vamos entender o que isso significa e como escrever código recursivo evitando esse problema!</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/recursao-de-causa-ou-como-nao-estourar-a-pilha/social-image.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Casamento de padrões em Elixir]]></title>
+            <link>https://blog.cisne.dev/casamento-de-padroes-em-elixir</link>
+            <guid>https://blog.cisne.dev/casamento-de-padroes-em-elixir</guid>
+            <pubDate>Fri, 16 Oct 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Um desafio de programação é conseguir escrever código de maneira mais sucinta sem sacrificar a facilidade de compreensão. É comum ver soluções de uma linha que resolvem o problema e ninguém entende como elas funcionam. Pensando nisso, algumas linguagens trazem sintaxe que permite escrever, de maneira idiomática, código mais expressivo. Um exemplo disso é <strong>casamento de padrões</strong>. Recentemente, comecei a estudar Elixir, e fiquei feliz em descobrir que <em>pattern matching</em> é uma parte importante da linguagem e resolvi trazer um pouco disso pra cá!</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/casamento-de-padroes-em-elixir/social-image.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Texto com degradê em CSS (igual a esse título)]]></title>
+            <link>https://blog.cisne.dev/texto-com-degrade-em-css-igual-a-esse-titulo</link>
+            <guid>https://blog.cisne.dev/texto-com-degrade-em-css-igual-a-esse-titulo</guid>
+            <pubDate>Wed, 16 Sep 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<p>A cor do texto em CSS é definida usando a propriedade <code>color</code>. Mas há maneiras de usar algo mais complexo do que apenas uma cor? Dá sim, é só olhar para o título deste post. O texto nele, ao invés de ter uma cor apenas, é preenchido por um degradê (ou gradiente). Vamos fazer isso só com CSS!</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/texto-com-degrade-em-css-igual-a-esse-titulo/social-image.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[De zero a heroi: Hero animations em Flutter]]></title>
+            <link>https://blog.cisne.dev/de-zero-a-heroi-hero-animations-em-flutter</link>
+            <guid>https://blog.cisne.dev/de-zero-a-heroi-hero-animations-em-flutter</guid>
+            <pubDate>Mon, 31 Aug 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Animações são uma excelente maneira de tornar um app mais interativo e engajar os usuários. Flutter tem várias opções para criar animações, com diferentes níveis de complexididade. Uma das (se não a) mais simples são as <strong>Hero animations</strong>, que, com apenas um widget, permitem animar um componente durante a transição entre duas telas. Vamos ver como fazer uma animação super rápida e explorar possibilidades mais avançadas para criar animações mais complexas com essa ferramenta.</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/de-zero-a-heroi-hero-animations-em-flutter/social-image.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Montando 5 gráficos com uma métrica do Prometheus]]></title>
+            <link>https://blog.cisne.dev/montando-5-graficos-com-uma-metrica-do-prometheus</link>
+            <guid>https://blog.cisne.dev/montando-5-graficos-com-uma-metrica-do-prometheus</guid>
+            <pubDate>Thu, 20 Aug 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<p>A linguagem de consultas do Prometheus, a <strong>PromQL</strong>, permite fazer transformações e agregações das métricas para extrair dados que não haviam sido reportados diretamente pela aplicação mas podem ser deduzidos. Nesse post, trago 5 consultas diferentes que podemos fazer para monitorar nossas aplicações usando apenas <em>(tecnicamente)</em> uma métrica! Vamos usá-las para montar gráficos no Grafana.</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/montando-5-graficos-com-uma-metrica-do-prometheus/social-image.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Navegação por rotas em Flutter usando o Nuvigator]]></title>
+            <link>https://blog.cisne.dev/navegacao-por-rotas-em-flutter-usando-o-nuvigator</link>
+            <guid>https://blog.cisne.dev/navegacao-por-rotas-em-flutter-usando-o-nuvigator</guid>
+            <pubDate>Wed, 12 Aug 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Um dos aspectos mais importantes de um app é a <strong>navegação entre telas</strong>. Na web, isso é feito através de links (e, com a alta dos frameworks de front-end JavaScript, reimplementando esta navegação no cliente). Num app em Flutter, existem funções de navegação para transicionar de uma tela para outra. Com elas é possível empilhar, substituir e remover telas criando o próprio widget da tela seguinte nestas funções.</p><p>O <strong>Nuvigator</strong> surgiu como uma abstração em cima desse roteamento do Flutter para facilitar a declaração e reutilização destas rotas, o que é bem útil conforme o app cresce e tem mais partes que interagem. Trouxe uma introdução a como ele funciona neste post!</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/navegacao-por-rotas-em-flutter-usando-o-nuvigator/social-image.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Desmistificando o margin collapsing do CSS]]></title>
+            <link>https://blog.cisne.dev/desmistificando-o-margin-collapsing-do-css</link>
+            <guid>https://blog.cisne.dev/desmistificando-o-margin-collapsing-do-css</guid>
+            <pubDate>Mon, 03 Aug 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Um comportamento que de vez em quando me pega desprevinido de CSS é o <em>margin collapsing</em> (literalmente, &quot;desmoronamento das margens&quot;, na falta de uma tradução melhor), que é a combinação de duas margens adjacentes em uma só. É algo que faz parte da especificação mas muitas vezes passa despercebido. Agora, quando isso interfere no que queremos fazer, se você não souber o que é e como funciona, vai quebrar a cabeça para desvendar <strong>por que suas margens desaparecem</strong>. Trouxe a definição de em quais casos suas margens podem sumir e alguns exemplos para ajudar a visualizar cada um!</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/desmistificando-o-margin-collapsing-do-css/social-image.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Melhorando acessibilidade de linhas e colunas em Flutter]]></title>
+            <link>https://blog.cisne.dev/melhorando-acessibilidade-de-linhas-e-colunas-em-flutter</link>
+            <guid>https://blog.cisne.dev/melhorando-acessibilidade-de-linhas-e-colunas-em-flutter</guid>
+            <pubDate>Mon, 27 Jul 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Flutter parte do princpípio de &quot;tudo é um widget!&quot;, e isso inclui as primitivas de layout, como <code>Row</code> e <code>Column</code>. Com essas ferramentas bem simples, conseguimos criar vários tipos de layout. Porém, nem sempre a maneira com que algo é <strong>visualmente disposto</strong> bate com <strong>a ordem e agrupamento semântico</strong>. Estava fazendo um app em Flutter e, ao tentar usá-lo com o VoiceOver (leitor de tela do iPhone, usado normalmente por pessoas com deficiência visual), percebi que ele lia alguns conteúdos numa ordem ruim. Vamos ver o que precisei fazer para consertar isso — é mais fácil do que parece!</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/melhorando-acessibilidade-de-linhas-e-colunas-em-flutter/social-image.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Modo noturno com CSS variables]]></title>
+            <link>https://blog.cisne.dev/modo-noturno-com-css-variables</link>
+            <guid>https://blog.cisne.dev/modo-noturno-com-css-variables</guid>
+            <pubDate>Thu, 16 Jul 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Quase todo sistema operacional hoje vem com suporte a definir um nível de &quot;brilho&quot; da interface, que geralmente tem dois valores: claro e escuro (light ou dark). As implementações modernas de CSS incluem suporte a verificar qual a preferência do usuário, se houver, e adaptar sua interface de acordo. Vamos implementar um modo noturno com CSS, usando CSS variables para deixar o código mais escalável e menos repetitivo!</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/modo-noturno-com-css-variables/social-image.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Animando um personagem com CSS e JavaScript]]></title>
+            <link>https://blog.cisne.dev/animando-um-personagem-com-css-e-javascript</link>
+            <guid>https://blog.cisne.dev/animando-um-personagem-com-css-e-javascript</guid>
+            <pubDate>Fri, 10 Jul 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<p>CSS é uma parada poderosa. Apesar de, originalmente, servir para suportar o HTML e definir estilos para itens em um documento, a comunidade de desenvolvimento front-end mostrou que dá para fazer muito mais que isso e cria verdadeiras experiências com CSS, substituindo ferramentas de animação e imagens por linhas de código de folha de estilos. Juntando isso com o dinamismo de JavaScript, dá para criar interações bem legais diretamente na web, muitas vezes sem assets extra além do próprio código.</p><p>Esse post é um experimento para criar algo que não é novo, mas que é divertido e mostra algumas das capacidades de criar animações interativas com CSS e JS. Minha ideia é tentar fazer uma animação para acompanhar um formulário de login sem usar imagens ou outros recursos além de HTML, CSS e JS. <strong>Eu não sou um artista então não espere uma obra de arte.</strong> A ideia é, com pouco código, fazer um efeito que fique legal.</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/animando-um-personagem-com-css-e-javascript/social-image.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Animações em JavaScript a 60 fps]]></title>
+            <link>https://blog.cisne.dev/animacoes-em-javascript-a-60-fps</link>
+            <guid>https://blog.cisne.dev/animacoes-em-javascript-a-60-fps</guid>
+            <pubDate>Mon, 06 Jul 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Na era do CSS moderno, eu falar em animações feitas com JavaScript pode fazer você achar que estou desenterrando cadáveres. Com o CSS atual, a vida de quem quer fazer animações bonitas e rápidas melhorou bastante. Infelizmente, nem tudo dá para animar com CSS ainda, e algumas coisas precisam ser feitas na mão, via JavaScript.</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/animacoes-em-javascript-a-60-fps/social-image.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Componentes com estado em Type­Script, estilo Clojure]]></title>
+            <link>https://blog.cisne.dev/componentes-com-estado-em-typescript-estilo-clojure</link>
+            <guid>https://blog.cisne.dev/componentes-com-estado-em-typescript-estilo-clojure</guid>
+            <pubDate>Sat, 04 Jul 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Uma das ideias da programação funcional é o uso de funções puras para definir a lógica da aplicação que você estiver fazendo. Isso traz várias vantagens, como a possibilidade de trabalhar com estruturas de dados imutáveis, o que diminui ou elimina uma classe de problemas de concorência.</p><p>Isso é muito bonito, e eu recomendo essa abordagem, mas em algum momento você (tomara) vai precisar <strong>causar efeitos colaterais no universo</strong>. Seja ler ou escrever num banco de dados, interagir com um servidor ou cliente HTTP, com o sistema de arquivos, e por aí vai. E, nessa hora, separar estes efeitos colaterais ajuda muito a não misturar, sem querer, com a lógica que deveria ser pura.</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/componentes-com-estado-em-typescript-estilo-clojure/social-image.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Tipos complexos de métricas no Prometheus]]></title>
+            <link>https://blog.cisne.dev/tipos-complexos-de-metricas-no-prometheus</link>
+            <guid>https://blog.cisne.dev/tipos-complexos-de-metricas-no-prometheus</guid>
+            <pubDate>Tue, 30 Jun 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<p>O Prometheus, <a href="https:/blog.cisne.dev/tipos-primitivos-de-metricas-no-prometheus/">além dos tipos primitivos de métricas</a>, possui dois tipos mais complexos para monitorar métricas com mais nuances do que apenas contadores e medidas. Esses tipos são o <strong>histograma</strong> e o <strong>sumário</strong>. Eles são parecidos no sentido de que dá para fazer certas análises em cima de ambos os tipos, mas possuem algumas diferenças sutís em que um pode ser melhor que o outro, a depender da situação.</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/tipos-complexos-de-metricas-no-prometheus/social-image.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Eu não ia publicar esse blog, aí um artigo apareceu]]></title>
+            <link>https://blog.cisne.dev/eu-nao-ia-publicar-esse-blog</link>
+            <guid>https://blog.cisne.dev/eu-nao-ia-publicar-esse-blog</guid>
+            <pubDate>Mon, 29 Jun 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<blockquote><p><strong>Psicólogo:</strong> o que a gente faz quando quer fazer algo novo?&lt;br&gt;
+<strong>Eu:</strong> escreve um gerador de site estático do zero!&lt;br&gt;
+<strong>Psicólogo:</strong> não.</p></blockquote><p>Aparentemente, eu não ouvi e fiz mesmo assim. 🤷‍♂️</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/eu-nao-ia-publicar-esse-blog/social-image.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Tipos primitivos de métricas no Prometheus]]></title>
+            <link>https://blog.cisne.dev/tipos-primitivos-de-metricas-no-prometheus</link>
+            <guid>https://blog.cisne.dev/tipos-primitivos-de-metricas-no-prometheus</guid>
+            <pubDate>Tue, 11 Feb 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[<p>O Prometheus tem dois tipos primitivos e dois tipos complexos de métricas. Os
+tipos complexos reusam os tipos primitivos, usando múltiplas séries temporais
+para fazer o que parece ser apenas uma quando consultado com as funções de
+agregação específicas.</p><p>Vamos dar uma olhada nos dois tipos primitivos: <strong>contadores</strong> e <strong>medidas</strong>.</p>]]></description>
+            <enclosure url="https://blog.cisne.dev/tipos-primitivos-de-metricas-no-prometheus/social-image.png" length="0" type="image/png"/>
+        </item>
+    </channel>
+</rss>

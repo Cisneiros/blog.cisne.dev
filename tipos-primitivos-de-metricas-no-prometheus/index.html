@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="pt-BR" class=" "><head><meta name="generator" content="React Static"/><title data-react-helmet="true">Tipos primitivos de métricas no Prometheus · Cisne.dev blog</title><meta charSet="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:creator" content="Cisneiros"/><meta data-react-helmet="true" property="og:title" content="Tipos primitivos de métricas no Prometheus · Cisne.dev blog"/><meta data-react-helmet="true" property="og:image" content="https://blog.cisne.dev/tipos-primitivos-de-metricas-no-prometheus/social-image.png"/><meta data-react-helmet="true" name="twitter:title" content="Tipos primitivos de métricas no Prometheus · Cisne.dev blog"/><meta data-react-helmet="true" name="twitter:image" content="https://blog.cisne.dev/tipos-primitivos-de-metricas-no-prometheus/social-image.png"/><link rel="preload" as="script" href="/templates/vendors~__react_static_root__/src/containers/post~__react_static_root__/src/containers/postList.207edc50.js"/><link rel="preload" as="script" href="/templates/__react_static_root__/src/containers/post~__react_static_root__/src/containers/postList.a04ea84b.js"/><link rel="preload" as="script" href="/templates/__react_static_root__/src/containers/post.d8dd52db.js"/><link rel="preload" as="script" href="/templates/vendors~main.272ae1d1.js"/><link rel="preload" as="script" href="/main.f19d4c14.js"/><link data-react-helmet="true" rel="stylesheet" href="//unpkg.com/dracula-prism/dist/css/dracula-prism.min.css"/><style data-styled="" data-styled-version="5.1.1">.CfxHf{max-width:960px;margin:0 auto;position:relative;}/*!sc*/
+data-styled.g1[id="ui__Fit-prwz6b-0"]{content:"CfxHf,"}/*!sc*/
+.iuDFSN{padding:1rem;color:var(--color-mid);text-align:center;font-size:1.5rem;}/*!sc*/
+.iuDFSN a,.iuDFSN a:hover{-webkit-text-decoration:none;text-decoration:none;color:inherit;}/*!sc*/
+data-styled.g2[id="Navigation__Container-sc-1yk0pqp-0"]{content:"iuDFSN,"}/*!sc*/
+.izuwCZ{max-width:960px;margin:0 auto;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}/*!sc*/
+data-styled.g3[id="Navigation__NavFit-sc-1yk0pqp-1"]{content:"izuwCZ,"}/*!sc*/
+.TctaC{width:2.5rem;height:1.2em;overflow:hidden;--default-rotation:-180deg;}/*!sc*/
+@media (prefers-color-scheme:dark){.TctaC{--default-rotation:0;}}/*!sc*/
+data-styled.g4[id="Navigation__BrightnessContainer-sc-1yk0pqp-2"]{content:"TctaC,"}/*!sc*/
+.sLeDt{-webkit-transform:rotate(var(--default-rotation));-ms-transform:rotate(var(--default-rotation));transform:rotate(var(--default-rotation));-webkit-transition:-webkit-transform 0.3s ease-out;-webkit-transition:transform 0.3s ease-out;transition:transform 0.3s ease-out;}/*!sc*/
+html.light .sLeDt{-webkit-transform:rotate(-180deg);-ms-transform:rotate(-180deg);transform:rotate(-180deg);}/*!sc*/
+html.dark .sLeDt{-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0);}/*!sc*/
+data-styled.g5[id="Navigation__BrightnessSpinner-sc-1yk0pqp-3"]{content:"sLeDt,"}/*!sc*/
+.frsARl{background:none;border:none;cursor:pointer;}/*!sc*/
+.frsARl:last-child{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}/*!sc*/
+data-styled.g7[id="Navigation__BrightnessIcon-sc-1yk0pqp-5"]{content:"frsARl,"}/*!sc*/
+.gdHjSq{margin-top:3rem;padding:1rem;background:var(--color-foreground);color:var(--color-background);}/*!sc*/
+.gdHjSq a{color:var(--text-inverse-color-1);}/*!sc*/
+.gdHjSq a:hover{color:var(--text-inverse-color-3);}/*!sc*/
+data-styled.g8[id="Footer__Container-b3q04c-0"]{content:"gdHjSq,"}/*!sc*/
+.layJcq{max-width:960px;margin:0 auto;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}/*!sc*/
+data-styled.g9[id="Footer__FooterFit-b3q04c-1"]{content:"layJcq,"}/*!sc*/
+*{box-sizing:border-box;margin:0;padding:0;border:0;font-size:inherit;font-weight:inherit;font-style:inherit;}/*!sc*/
+:root{--color-1:#12c2e9;--color-2:#c471ed;--color-3:#f64f59;--color-1-darker:#0A7B94;--color-2-darker:#AE3CE7;--color-3-darker:#E90C1B;--color-light:#fefefe;--color-dark:#030303;--color-mid-dark:#747481;--color-mid-light:#818181;--font-weight-light:300;--font-weight-regular:400;--font-weight-heavy:500;--font-family-light:"HelveticaNeue-Light","Helvetica Neue Light",'Helvetica Neue',sans-serif;--font-family:'Helvetica Neue',sans-serif;}/*!sc*/
+strong,h1,h2,h3,h4,h5,h6{font-family:var(--font-family);}/*!sc*/
+html{font-family:var(--font-family-light);font-size:20px;line-height:1;color:var(--color-foreground);background-color:var(--color-background);text-rendering:optimizeLegibility;}/*!sc*/
+@media (max-width:600px){html{font-size:16px;}}/*!sc*/
+html,html.light{--color-background:var(--color-light);--color-foreground:var(--color-dark);--color-mid:var(--color-mid-dark);--text-color-1:var(--color-1-darker);--text-color-2:var(--color-2-darker);--text-color-3:var(--color-3-darker);--text-inverse-color-1:var(--color-1);--text-inverse-color-2:var(--color-2);--text-inverse-color-3:var(--color-3);}/*!sc*/
+html.dark{--color-background:var(--color-dark);--color-foreground:var(--color-light);--color-mid:var(--color-mid-light);--text-color-1:var(--color-1);--text-color-2:var(--color-2);--text-color-3:var(--color-3);--text-inverse-color-1:var(--color-1-darker);--text-inverse-color-2:var(--color-2-darker);--text-inverse-color-3:var(--color-3-darker);}/*!sc*/
+@media (prefers-color-scheme:dark){html{--color-background:var(--color-dark);--color-foreground:var(--color-light);--color-mid:var(--color-mid-light);}}/*!sc*/
+body{font-size:1em;font-weight:var(--font-weight-light);}/*!sc*/
+strong{font-weight:var(--font-weight-heavy);}/*!sc*/
+em{font-style:italic;}/*!sc*/
+main{padding:1rem;}/*!sc*/
+hr{width:30%;margin:4rem auto;border:none;border-bottom:dotted 1px var(--color-1);}/*!sc*/
+.pagination{text-align:center;}/*!sc*/
+.pagination a{color:var(--text-color-1);}/*!sc*/
+.pagination a:hover{color:var(--text-color-3);}/*!sc*/
+a{color:var(--text-color-1);-webkit-text-decoration-color:#c471ed80;text-decoration-color:#c471ed80;-webkit-text-decoration-style:wavy;text-decoration-style:wavy;}/*!sc*/
+a:hover{color:var(--text-color-3);-webkit-text-decoration-color:#12c2e980;text-decoration-color:#12c2e980;}/*!sc*/
+.phone-mockup{max-width:15rem;margin:0 auto 1rem;position:relative;}/*!sc*/
+.phone-mockup::before{content:'';width:100%;height:100%;position:absolute;pointer-events:none;background:url(/iphone-11-pro.png) no-repeat;background-size:contain;}/*!sc*/
+.phone-mockup video,.phone-mockup img{width:100%;padding:9.3%;}/*!sc*/
+data-styled.g14[id="sc-global-hFBrmQ1"]{content:"sc-global-hFBrmQ1,"}/*!sc*/
+.tuaWG{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}/*!sc*/
+@media (max-width:600px){.tuaWG{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}}/*!sc*/
+data-styled.g23[id="Poststyles__AfterPost-sc-12qb97v-0"]{content:"tuaWG,"}/*!sc*/
+.gkeqUt{-webkit-flex:1;-ms-flex:1;flex:1;}/*!sc*/
+@media (max-width:600px){.gkeqUt{text-align:center;margin-bottom:1rem;}}/*!sc*/
+data-styled.g24[id="Poststyles__AfterPostChild-sc-12qb97v-1"]{content:"gkeqUt,"}/*!sc*/
+.fAvgXR{-webkit-flex:1;-ms-flex:1;flex:1;text-align:right;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;}/*!sc*/
+@media (max-width:600px){.fAvgXR{text-align:center;margin-bottom:1rem;}}/*!sc*/
+data-styled.g25[id="Poststyles__Tags-sc-12qb97v-2"]{content:"fAvgXR,"}/*!sc*/
+.kSZCZX::before{content:' #';color:var(--color-mid);}/*!sc*/
+data-styled.g26[id="Poststyles__Tag-sc-12qb97v-3"]{content:"kSZCZX,"}/*!sc*/
+.kyWzPB{-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;}/*!sc*/
+data-styled.g27[id="Poststyles__Container-sc-12qb97v-4"]{content:"kyWzPB,"}/*!sc*/
+.hhBwVH{font-size:5rem;font-weight:var(--font-weight-regular);line-height:0.8;background:linear-gradient(var(--color-1),var(--color-2),var(--color-3));-webkit-text-fill-color:transparent;background-clip:text;-webkit-background-clip:text;padding-bottom:1rem;margin:1rem 0;}/*!sc*/
+html.rainbow .hhBwVH{background-image:linear-gradient(124deg,#ff2400,#e81d1d,#e8b71d,#e3e81d,#1de840,#1ddde8,#2b1de8,#dd00f3,#dd00f3);-webkit-animation:hTUzwZ 9s ease infinite;animation:hTUzwZ 9s ease infinite;background-size:450% 450%;}/*!sc*/
+@media (max-width:600px){.hhBwVH{font-size:3.5rem;}}/*!sc*/
+.hhBwVH a{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+data-styled.g28[id="Poststyles__Title-sc-12qb97v-5"]{content:"hhBwVH,"}/*!sc*/
+.fonWHZ{color:var(--color-mid);text-align:center;margin-bottom:2rem;}/*!sc*/
+data-styled.g29[id="Poststyles__Meta-sc-12qb97v-6"]{content:"fonWHZ,"}/*!sc*/
+.jhgzPU{line-height:1.6;}/*!sc*/
+.jhgzPU h2{font-size:2.5rem;}/*!sc*/
+.jhgzPU h3{font-size:2rem;}/*!sc*/
+.jhgzPU h4{font-size:1.5rem;}/*!sc*/
+.jhgzPU h2,.jhgzPU h3,.jhgzPU h4,.jhgzPU h5,.jhgzPU h6{-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;font-weight:var(--font-weight-regular);line-height:0.8;padding-bottom:1rem;margin-top:2rem;}/*!sc*/
+.jhgzPU img{max-width:100%;}/*!sc*/
+.jhgzPU pre.refractor{margin-top:0;margin-left:0;padding-left:1rem;border-left:solid 0.25rem var(--color-1);border-radius:0;font-size:0.8rem;overflow-wrap:normal;overflow-x:auto;background-color:var(--color-dark);color:var(--color-light);padding-top:0.5rem;padding-bottom:0.5rem;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;}/*!sc*/
+.jhgzPU pre.refractor::-webkit-scrollbar{width:0.25rem;height:0.25rem;}/*!sc*/
+.jhgzPU pre.refractor code,.jhgzPU code{font-family:'Fira Code','Menlo',monospace;}/*!sc*/
+.jhgzPU p code{color:var(--text-color-3);}/*!sc*/
+.jhgzPU p code,.jhgzPU h1 code,.jhgzPU h2 code,.jhgzPU h3 code,.jhgzPU h4 code,.jhgzPU h5 code,.jhgzPU h6 code{font-size:0.9em;}/*!sc*/
+.jhgzPU p,.jhgzPU pre,.jhgzPU ul,.jhgzPU ol,.jhgzPU table,.jhgzPU blockquote,.jhgzPU .live-code-container{margin-bottom:1rem;}/*!sc*/
+.jhgzPU twitter-widget{margin-bottom:1rem !important;}/*!sc*/
+.jhgzPU p:last-child,.jhgzPU pre:last-child,.jhgzPU ul:last-child,.jhgzPU ol:last-child,.jhgzPU table:last-child,.jhgzPU blockquote:last-child,.jhgzPU .live-code-container:last-child{margin-bottom:0;}/*!sc*/
+.jhgzPU ul,.jhgzPU ol{list-style:none;margin-left:1rem;counter-reset:li;}/*!sc*/
+.jhgzPU li{counter-increment:li;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+.jhgzPU ul li::before{content:'•';margin-right:0.5rem;color:var(--color-2);}/*!sc*/
+.jhgzPU ol li::before{content:"."counter(li);margin-right:0.5rem;color:var(--color-2);font-weight:var(--font-weight-regular);width:1em;display:inline-block;margin-left:-0.5em;margin-right:0.5em;text-align:right;direction:rtl;}/*!sc*/
+.jhgzPU table{margin-left:auto;margin-right:auto;border-spacing:0;font-size:0.9em;}/*!sc*/
+.jhgzPU td,.jhgzPU th{border-bottom:solid 1px var(--color-2);padding:0.5rem;}/*!sc*/
+.jhgzPU th{font-weight:var(--font-weight-heavy);}/*!sc*/
+.jhgzPU tr:hover{background:var(--color-2);}/*!sc*/
+.jhgzPU tr:last-of-type td{border-bottom:0;}/*!sc*/
+.jhgzPU blockquote{padding-left:1rem;border-left:solid 0.25rem var(--color-3);color:var(--color-mid);}/*!sc*/
+data-styled.g30[id="Poststyles__Content-sc-12qb97v-7"]{content:"jhgzPU,"}/*!sc*/
+.jjKdZc{position:fixed;top:0;left:0;right:0;height:0.25rem;background-color:var(--color-1);-webkit-transition:opacity 0.25s ease-out;transition:opacity 0.25s ease-out;z-index:2;}/*!sc*/
+data-styled.g31[id="post__ScrollTrackerContainer-gh0jqu-0"]{content:"jjKdZc,"}/*!sc*/
+@-webkit-keyframes hTUzwZ{0%{background-position:0% 82%;}50%{background-position:100% 19%;}100%{background-position:0% 82%;}}/*!sc*/
+@keyframes hTUzwZ{0%{background-position:0% 82%;}50%{background-position:100% 19%;}100%{background-position:0% 82%;}}/*!sc*/
+data-styled.g32[id="sc-keyframes-hTUzwZ"]{content:"hTUzwZ,"}/*!sc*/
+</style><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml"/></head><body><div id="root"><nav class="Navigation__Container-sc-1yk0pqp-0 iuDFSN"><div class="ui__Fit-prwz6b-0 Navigation__NavFit-sc-1yk0pqp-1 izuwCZ"><p class="logo"><a href="/">Cisne.dev blog</a></p><div class="Navigation__BrightnessContainer-sc-1yk0pqp-2 TctaC"><div class="Navigation__BrightnessSpinner-sc-1yk0pqp-3 sLeDt"><button title="Mudar para modo diurno" aria-label="Mudar para modo diurno" class="Navigation__ClearButton-sc-1yk0pqp-4 Navigation__BrightnessIcon-sc-1yk0pqp-5 frsARl">🌙</button><button title="Mudar para modo noturno" aria-label="Mudar para modo noturno" class="Navigation__ClearButton-sc-1yk0pqp-4 Navigation__BrightnessIcon-sc-1yk0pqp-5 frsARl">☀️</button></div></div></div></nav><main><div class="ui__Fit-prwz6b-0 CfxHf"><div><div style="width:0%;opacity:0" class="post__ScrollTrackerContainer-gh0jqu-0 jjKdZc"></div><article class="Poststyles__Container-sc-12qb97v-4 kyWzPB"><h1 class="Poststyles__Title-sc-12qb97v-5 hhBwVH"><a href="/tipos-primitivos-de-metricas-no-prometheus/">Tipos primitivos de métricas no Prometheus</a></h1><p class="Poststyles__Meta-sc-12qb97v-6 fonWHZ">Publicado em <!-- -->11 fev 2020<!-- -->. Uns <!-- -->3<!-- --> minutos de leitura.</p><div class="Poststyles__Content-sc-12qb97v-7 jhgzPU content"><p>O Prometheus tem dois tipos primitivos e dois tipos complexos de métricas. Os
+tipos complexos reusam os tipos primitivos, usando múltiplas séries temporais
+para fazer o que parece ser apenas uma quando consultado com as funções de
+agregação específicas.</p><p>Vamos dar uma olhada nos dois tipos primitivos: <strong>contadores</strong> e <strong>medidas</strong>.</p><span><!-- summary-break --></span><h2>🧮 Contador (counter)</h2><p>Um contador é um número que sempre aumenta (ou fica parado). Ele representa o
+número de vezes que alguma coisa aconteceu. Alguns exemplos:</p><ul><li>Número de visualizações do seu site</li><li>Número de transações de cartão de crédito no seu sistema (você não pode
+desfazer uma transação -- você pode estorná-la, mas ela aconteceu e isto é
+imutável)</li><li>Número de deploys da sua aplicação</li></ul><p>Como você pode ver, um contador é algo que normalmente se pensa em termos de
+<strong>número de vezes que <code>x</code> aconteceu</strong>.</p><p>Agora, aplicações que exportam métricas para o Prometheus não persistem estas
+métricas entre reinícios, então o contador vai voltar para zero quando a
+aplicação tiver um deploy, travar ou qualquer outro evento que a reinicie. Então
+como contadores são úteis?</p><p>Um contador por si só é difícil de entender. É aí que a função <code>rate</code> entra.
+<code>rate</code> recebe uma série temporal de um contador, um tamanho de janela em
+unidades de tempo, e retorna uma série temporal de <code>eventos por segundo</code>. A
+função <code>rate</code> e sua família sabem lidar com reinícios de contadores.</p><p>Por exemplo, se uma métrica de contador tinha o valor de <code>50</code> na última coleta,
+e agora tem o valor <code>3</code>, a aplicação tem que ter reiniciado. A função <code>rate</code> não
+vai dar como resultado &quot;eventos por segundo negativo&quot; aqui. Ela vai, na verdade,
+dizer que o contador aumentou em <code>3</code> unidades entre as coletas (de <code>50</code> para
+<code>53</code>). Isso quer dizer que você pode perder alguns dados se, por exemplo, entre
+as coletas o contador foi para <code>52</code> e depois reiniciou. Mas isso é ok e o
+Prometheus deve ser usado em situações em que essas perdas esporádicas pelos
+reinícios não sejam um problema (a maior parte das situação de monitoramento
+deve estar ok quanto a isso).</p><h2>📈 Medida (gauge)</h2><p>Antes de mais nada, eu não consegui pensar numa tradução melhor pra <em>gauge</em>. Outra tradução que pode ajudar (ou não é <strong>bitola</strong>). Enfim…</p><p>Uma medida é um número que pode subir, descer ou manter-se parado. Ela
+representa um retrato instantâneo de uma quantidade observável. Alguns exemplos:</p><ul><li>Quantidade atual de usuários online</li><li>Quantidade atual de compras finalizadas com envio pendente (vai subir quando
+uma nova compra for criada e descer quando uma compra for enviada)</li><li>Quantidade atual de CPU em utilização, percentual</li></ul><p>Esses exemplos reforçam o fato que medidas normalmente significam uma
+<em>quantidade atual de coisas</em>, absoluta ou relativa.</p><p>Como é um retrato do estado atual, uma métrica de medida pode ser lida sozinha e
+deve fazer sentido. Você pode também traçá-la sobre o tempo para ver tendências.
+Se a aplicação reiniciar, ela vai começar a reportar o valor atual da métrica de
+novo quando iniciar, então você não precisa de um tratamento especial aqui.</p><h2>O que vem depois?</h2><p>Não só de contadores e <em>gauges</em> vive o Prometheus. Ok, podemos até dizer que sim. O Prometheus também tem dois tipos complexos de métricas: <strong>histogramas e sumários</strong> que são construidos como conjuntos desses de métricas desses dois tipos primitivos. <a href="/tipos-complexos-de-metricas-no-prometheus/">Dá uma lida sobre no outro post!</a></p></div><hr/><div class="Poststyles__AfterPost-sc-12qb97v-0 tuaWG"><p class="Poststyles__AfterPostChild-sc-12qb97v-1 gkeqUt">Gostou? <a href="https://twitter.com/intent/tweet?text=%22Tipos%20primitivos%20de%20m%C3%A9tricas%20no%20Prometheus%22%20por%20%40Cisneiros%0A%0Ahttps%3A%2F%2Fblog.cisne.dev%2Ftipos-primitivos-de-metricas-no-prometheus" target="_blank" rel="noopener noreferrer">Que tal compartilhar?</a></p><p class="Poststyles__AfterPostChild-sc-12qb97v-1 Poststyles__Tags-sc-12qb97v-2 fAvgXR">Tags: <span class="Poststyles__Tag-sc-12qb97v-3 kSZCZX"><a href="/tag/prometheus">prometheus</a></span><span class="Poststyles__Tag-sc-12qb97v-3 kSZCZX"><a href="/tag/monitoring">monitoring</a></span></p></div></article></div></div></main><footer class="Footer__Container-b3q04c-0 gdHjSq"><div class="ui__Fit-prwz6b-0 Footer__FooterFit-b3q04c-1 layJcq"><p>© <a href="https://cisne.dev">Alexandre Cisneiros</a></p><p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></p></div></footer></div><script type="text/javascript">window.__routeInfo = JSON.parse("{\"template\":\"__react_static_root__/src/containers/post\",\"sharedHashesByProp\":{},\"data\":{\"postData\":{\"title\":\"Tipos primitivos de m\u00E9tricas no Prometheus\",\"date\":\"2020-02-11T00:00:00-03:00\",\"slug\":\"tipos-primitivos-de-metricas-no-prometheus\",\"tags\":[\"prometheus\",\"monitoring\"],\"filePath\":\"2020-02-11-tipos-primitivos-de-metricas-no-prometheus.md\",\"content\":\"O Prometheus tem dois tipos primitivos e dois tipos complexos de m\u00E9tricas. Os\\ntipos complexos reusam os tipos primitivos, usando m\u00FAltiplas s\u00E9ries temporais\\npara fazer o que parece ser apenas uma quando consultado com as fun\u00E7\u00F5es de\\nagrega\u00E7\u00E3o espec\u00EDficas.\\n\\nVamos dar uma olhada nos dois tipos primitivos: **contadores** e **medidas**.\\n\\n\u003C!-- summary-break -->\\n\\n## \uD83E\uDDEE Contador (counter)\\n\\nUm contador \u00E9 um n\u00FAmero que sempre aumenta (ou fica parado). Ele representa o\\nn\u00FAmero de vezes que alguma coisa aconteceu. Alguns exemplos:\\n\\n- N\u00FAmero de visualiza\u00E7\u00F5es do seu site\\n- N\u00FAmero de transa\u00E7\u00F5es de cart\u00E3o de cr\u00E9dito no seu sistema (voc\u00EA n\u00E3o pode\\n  desfazer uma transa\u00E7\u00E3o -- voc\u00EA pode estorn\u00E1-la, mas ela aconteceu e isto \u00E9\\n  imut\u00E1vel)\\n- N\u00FAmero de deploys da sua aplica\u00E7\u00E3o\\n\\nComo voc\u00EA pode ver, um contador \u00E9 algo que normalmente se pensa em termos de\\n**n\u00FAmero de vezes que `x` aconteceu**.\\n\\nAgora, aplica\u00E7\u00F5es que exportam m\u00E9tricas para o Prometheus n\u00E3o persistem estas\\nm\u00E9tricas entre rein\u00EDcios, ent\u00E3o o contador vai voltar para zero quando a\\naplica\u00E7\u00E3o tiver um deploy, travar ou qualquer outro evento que a reinicie. Ent\u00E3o\\ncomo contadores s\u00E3o \u00FAteis?\\n\\nUm contador por si s\u00F3 \u00E9 dif\u00EDcil de entender. \u00C9 a\u00ED que a fun\u00E7\u00E3o `rate` entra.\\n`rate` recebe uma s\u00E9rie temporal de um contador, um tamanho de janela em\\nunidades de tempo, e retorna uma s\u00E9rie temporal de `eventos por segundo`. A\\nfun\u00E7\u00E3o `rate` e sua fam\u00EDlia sabem lidar com rein\u00EDcios de contadores.\\n\\nPor exemplo, se uma m\u00E9trica de contador tinha o valor de `50` na \u00FAltima coleta,\\ne agora tem o valor `3`, a aplica\u00E7\u00E3o tem que ter reiniciado. A fun\u00E7\u00E3o `rate` n\u00E3o\\nvai dar como resultado \\\"eventos por segundo negativo\\\" aqui. Ela vai, na verdade,\\ndizer que o contador aumentou em `3` unidades entre as coletas (de `50` para\\n`53`). Isso quer dizer que voc\u00EA pode perder alguns dados se, por exemplo, entre\\nas coletas o contador foi para `52` e depois reiniciou. Mas isso \u00E9 ok e o\\nPrometheus deve ser usado em situa\u00E7\u00F5es em que essas perdas espor\u00E1dicas pelos\\nrein\u00EDcios n\u00E3o sejam um problema (a maior parte das situa\u00E7\u00E3o de monitoramento\\ndeve estar ok quanto a isso).\\n\\n## \uD83D\uDCC8 Medida (gauge)\\n\\nAntes de mais nada, eu n\u00E3o consegui pensar numa tradu\u00E7\u00E3o melhor pra _gauge_. Outra tradu\u00E7\u00E3o que pode ajudar (ou n\u00E3o \u00E9 **bitola**). Enfim\u2026\\n\\nUma medida \u00E9 um n\u00FAmero que pode subir, descer ou manter-se parado. Ela\\nrepresenta um retrato instant\u00E2neo de uma quantidade observ\u00E1vel. Alguns exemplos:\\n\\n- Quantidade atual de usu\u00E1rios online\\n- Quantidade atual de compras finalizadas com envio pendente (vai subir quando\\n  uma nova compra for criada e descer quando uma compra for enviada)\\n- Quantidade atual de CPU em utiliza\u00E7\u00E3o, percentual\\n\\nEsses exemplos refor\u00E7am o fato que medidas normalmente significam uma\\n*quantidade atual de coisas*, absoluta ou relativa.\\n\\nComo \u00E9 um retrato do estado atual, uma m\u00E9trica de medida pode ser lida sozinha e\\ndeve fazer sentido. Voc\u00EA pode tamb\u00E9m tra\u00E7\u00E1-la sobre o tempo para ver tend\u00EAncias.\\nSe a aplica\u00E7\u00E3o reiniciar, ela vai come\u00E7ar a reportar o valor atual da m\u00E9trica de\\nnovo quando iniciar, ent\u00E3o voc\u00EA n\u00E3o precisa de um tratamento especial aqui.\\n\\n## O que vem depois?\\n\\nN\u00E3o s\u00F3 de contadores e _gauges_ vive o Prometheus. Ok, podemos at\u00E9 dizer que sim. O Prometheus tamb\u00E9m tem dois tipos complexos de m\u00E9tricas: **histogramas e sum\u00E1rios** que s\u00E3o construidos como conjuntos desses de m\u00E9tricas desses dois tipos primitivos. [D\u00E1 uma lida sobre no outro post!](/tipos-complexos-de-metricas-no-prometheus/)\\n\",\"readingTime\":3,\"summary\":\"O Prometheus tem dois tipos primitivos e dois tipos complexos de m\u00E9tricas. Os\\ntipos complexos reusam os tipos primitivos, usando m\u00FAltiplas s\u00E9ries temporais\\npara fazer o que parece ser apenas uma quando consultado com as fun\u00E7\u00F5es de\\nagrega\u00E7\u00E3o espec\u00EDficas.\\n\\nVamos dar uma olhada nos dois tipos primitivos: **contadores** e **medidas**.\\n\\n\"}},\"path\":\"tipos-primitivos-de-metricas-no-prometheus\",\"sharedData\":{},\"siteData\":{}}");</script><script defer="" type="text/javascript" src="/templates/vendors~__react_static_root__/src/containers/post~__react_static_root__/src/containers/postList.207edc50.js"></script><script defer="" type="text/javascript" src="/templates/__react_static_root__/src/containers/post~__react_static_root__/src/containers/postList.a04ea84b.js"></script><script defer="" type="text/javascript" src="/templates/__react_static_root__/src/containers/post.d8dd52db.js"></script><script defer="" type="text/javascript" src="/templates/vendors~main.272ae1d1.js"></script><script defer="" type="text/javascript" src="/main.f19d4c14.js"></script></body></html>
